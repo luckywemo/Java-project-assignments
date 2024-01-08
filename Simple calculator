@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Simple Calculator");
+        System.out.println("Enter two numbers:");
+
+        // Input the first number
+        System.out.print("Number 1: ");
+        double num1 = scanner.nextDouble();
+
+        // Input the second number
+        System.out.print("Number 2: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.println("Choose an operation:");
+        System.out.println("1. Addition (+)");
+        System.out.println("2. Subtraction (-)");
+        System.out.println("3. Multiplication (*)");
+        System.out.println("4. Division (/)");
+
+        // Input the operation choice
+        System.out.print("Enter the operation number: ");
+        int choice = scanner.nextInt();
+
+        double result = 0;
+
+        // Perform the selected operation using if-else statements
+        if (choice == 1) {
+            result = num1 + num2;
+        } else if (choice == 2) {
+            result = num1 - num2;
+        } else if (choice == 3) {
+            result = num1 * num2;
+        } else if (choice == 4) {
+                result = num1 / num2;
+        } else {
+            System.out.println("Error: Invalid operation choice.");
+            return; // Exit the program
+        }
+
+        // Display the result
+        System.out.println("Result: " + result);
+
+        // Close the scanner
+        scanner.close();
+    }
+}
